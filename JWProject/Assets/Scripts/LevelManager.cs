@@ -19,14 +19,14 @@ public class LevelManager : MonoBehaviour {
 	void Awake(){
 		Instance = this;
 		scoreText.text = "Score : " + score.ToString ();
-		hitPointText.text ="Hitpoint : " + hitPoint.ToString ();
+		hitPointText.text =hitPoint.ToString ();
 	}
 
 	private void Update(){
 		if (player.position	.y < -10) {
 			player.position = spawnPosition.position;
 			hitPoint--;
-			hitPointText.text ="Hitpoint : " + hitPoint.ToString ();
+			hitPointText.text =hitPoint.ToString ();
 			if (hitPoint <= 0) {
 				SceneManager.LoadScene ("Menu");
 			}
